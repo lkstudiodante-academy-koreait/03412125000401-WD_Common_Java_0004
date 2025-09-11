@@ -28,15 +28,12 @@ public class CT01Training_04 {
 		System.out.print("정수 입력 : ");
 		int nVal = oScanner.nextInt();
 		
-		System.out.printf("2 진수 출력 (변환 전) : %s\n",
-				Integer.toString(nVal, 2));
+		System.out.printf("2 진수 출력 (변환 전) : %s\n", Integer.toString(nVal, 2));
 		
 		System.out.print("\n위치 입력 : ");
 		int nPos = oScanner.nextInt();
 		
 		int nResult = nVal ^ (1 << nPos);
-		
-		System.out.printf("2 진수 출력 (변환 후) : %s\n",
-				Integer.toString(nResult, 2));
+		System.out.printf("2 진수 출력 (변환 후) : %s\n", Integer.toString(nResult, 2));
 	}
 }

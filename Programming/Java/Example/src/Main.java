@@ -54,6 +54,7 @@ import Training.Training_04.CT01Training_04;
 import Training.Training_05.CT01Training_05;
 import Training.Training_06.CT01Training_06;
 import Training.Training_07.CT01Training_07;
+import Training.Training_08.CT01Training_08;
 
 /*
  * 클래스 (Class) 란?
@@ -98,11 +99,11 @@ public class Main {
 	
 	/** 메인 메서드 */
 	public static void main(String[] args) {
-		CE01Example_01.start(args);
+//		CE01Example_01.start(args);
 //		CE01Example_02.start(args);
 //		CE01Example_03.start(args);
 //		CE01Example_04.start(args);
-//		CE01Example_05.start(args);
+		CE01Example_05.start(args);
 //		CE01Example_06.start(args);
 //		CE01Example_07.start(args);
 //		CE01Example_08.start(args);
@@ -139,5 +140,6 @@ public class Main {
 //		CT01Training_05.start(args);
 //		CT01Training_06.start(args);
 //		CT01Training_07.start(args);
+//		CT01Training_08.start(args);
 	}
 }

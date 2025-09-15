@@ -2,8 +2,16 @@ package Training.Training_05;
 
 /*
  * Java 연습 문제 5
- * - 세부 학점 계산하기 (+ switch ~ case 활용)
- * - 세부 사항은 연습 문제 2 번 참고
+ * - 특정 자리 비트의 활성 여부를 검사하는 프로그램 제작하기
+ * - 위치를 입력 받은 후 해당 위치에 있는 비트의 활성 여부를 검사하는 연산 추가하기
+ * - 나머지 요구 사항은 연습 문제 2 번 참고
+ *
+ * Ex)
+ * 정수 입력 : 10
+ * 2 진수 출력 : 1010
+ *
+ * 위치 입력 : 1
+ * 결과 : True
  */
 
 import java.util.Scanner;
@@ -16,66 +24,15 @@ public class CT01Training_05 {
 	public static void start(String[] args) {
 		Scanner oScanner = new Scanner(System.in);
 		
-		System.out.print("점수 입력 : ");
-		int nScore = oScanner.nextInt();
+		System.out.print("정수 입력 : ");
+		int nVal = oScanner.nextInt();
 		
-		String oGrade = "";
-		String oGrade_Detail = "";
+		System.out.printf("2 진수 출력 : %s\n", Integer.toString(nVal, 2));
 		
-		switch(nScore / 10) {
-			case 9:
-			case 10:
-				oGrade = "A";
-				break;
-				
-			case 8:
-				oGrade = "B";
-				break;
-				
-			case 7:
-				oGrade = "C";
-				break;
-				
-			case 6:
-				oGrade = "D";
-				break;
-				
-			default:
-				oGrade = "F";
-				break;
-		}
+		System.out.print("\n위치 입력 : ");
+		int nPos = oScanner.nextInt();
 		
-		switch(nScore % 10) {
-			case 0:
-			case 1:
-			case 2:
-			case 3:
-				oGrade_Detail = "-";
-				break;
-				
-			case 4:
-			case 5:
-			case 6:
-				oGrade_Detail = "0";
-				break;
-				
-			default:
-				oGrade_Detail = "+";
-				break;
-		}
-		
-		switch(nScore) {
-			case 100:
-				oGrade_Detail = "+";
-				break;
-		}
-		
-		switch(oGrade) {
-			case "F":
-				oGrade_Detail = "";
-				break;
-		}
-		
-		System.out.printf("%s%s 학점입니다.\n", oGrade, oGrade_Detail);
+		int nResult = nVal & (1 << nPos);
+		System.out.printf("결과 : %s\n", nResult != 0);
 	}
 }

@@ -16,7 +16,7 @@ package Example.Example_06;
  * - foreach			<- 열거 가능 데이터 전용
  *
  * Ex)
- * while(조건문) {
+ * while(조건) {
  * 		// Do Something
  * }
  *
@@ -26,7 +26,7 @@ package Example.Example_06;
  *
  * do {
  * 		// Do Something
- * } while(조건문)
+ * } while(조건)
  *
  * while 계열 반복문 vs for 계열 반복문
  * - while 계열 반복문은 대부분의 프로그래밍 언어에서 지원하는 기본적인 반복문으로서
@@ -67,8 +67,10 @@ public class CE01Example_06 {
 		int i = 0;
 		
 		while(i < nTimes) {
+			i += 1;
+			
 			// 짝수 일 경우
-			if((i + 1) % 2 == 0) {
+			if(i % 2 == 0) {
 				/*
 				 * continue 키워드란?
 				 * - 점프문 중 하나로서 프로그램의 현재 흐름을 생략하고 다음 흐름으로 이동 시키는 역할을
@@ -106,8 +108,7 @@ public class CE01Example_06 {
 				continue;
 			}
 			
-			System.out.printf("%d, ", i + 1);
-			i += 1;
+			System.out.printf("%d, ", i);
 		}
 		
 		System.out.println("\n\n=====> for 반복문 <=====");

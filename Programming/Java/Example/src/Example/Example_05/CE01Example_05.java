@@ -10,12 +10,12 @@ package Example.Example_05;
  * - switch ~ case
  *
  * Ex)
- * if(조건문 A) {
- * 		// 조건문 A 를 만족 할 경우 실행 할 명령문
- * } else if(조건문 B) {
- * 		// 조건문 B 를 만족 할 경우 실행 할 명령문
+ * if(조건 A) {
+ * 		// 조건 A 를 만족 할 경우 실행 할 명령문
+ * } else if(조건 B) {
+ * 		// 조건 B 를 만족 할 경우 실행 할 명령문
  * } else {
- * 		// 조건문 A 와 조건문 B 를 만족하지 않을 경우 실행 할 명령문
+ * 		// 조건 A 와 조건 B 를 만족하지 않을 경우 실행 할 명령문
  * }
  *
  * switch(조건 데이터) {
@@ -115,7 +115,7 @@ public class CE01Example_05 {
 			}
 		}
 		
-		System.out.println("\n=====> switch ~ case 조건문 <=====");
+		System.out.println("\n=====> switch ~ case 조건문 - 문 형식 <=====");
 		
 		switch(nScore / 10) {
 			case 9:
@@ -149,6 +149,16 @@ public class CE01Example_05 {
 			default:
 				System.out.println("F 학점입니다.");
 				break;
+		}
+		
+		System.out.println("\n=====> switch ~ case 조건문 - 식 형식 <=====");
+		
+		switch(nScore / 10) {
+			case 9, 10 -> System.out.println("A 학점입니다.");
+			case 8 -> System.out.println("B 학점입니다.");
+			case 7 -> System.out.println("C 학점입니다.");
+			case 6 -> System.out.println("D 학점입니다.");
+			default -> System.out.println("F 학점입니다.");
 		}
 		
 		System.out.print("\n정수 (1 ~ 10) 입력 : ");

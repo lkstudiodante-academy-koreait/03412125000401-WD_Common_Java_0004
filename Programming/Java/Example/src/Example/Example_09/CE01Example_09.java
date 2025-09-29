@@ -48,10 +48,10 @@ package Example.Example_09;
  * }
  *
  * int nResultA = someMethodA();				<- 30 할당
- * int nResultB = someMethodB();				<- 30 할당
+ * int nResultB = someMethodA();				<- 30 할당
  *
  * int nResultC = someMethodB(10, 20);			<- 30 할당
- * int nResultD = someMethodC(20, 30);			<- 50 할당
+ * int nResultD = someMethodB(20, 30);			<- 50 할당
  *
  * 위와 같이 someMethodA 는 호출 할 때마다 항상 30 의 결과를 반환하는 반면 someMethodB 는
  * 메서드가 실행 되기 위해 필요한 데이터를 외부에서 전달 받음으로서 다양한 결과를 반환하는 것이 가능하다.

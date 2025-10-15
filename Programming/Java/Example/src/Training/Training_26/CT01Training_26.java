@@ -34,19 +34,14 @@ public class CT01Training_26 {
 	}
 	
 	/** 하노이 탑 결과를 출력한다 */
-	private static void printResult_HanoiTower(int a_nNum,
-											   char a_chFrom,
-											   char a_chTo,
-											   char a_chBuffer) {
+	private static void printResult_HanoiTower(int a_nNum, char a_chFrom, char a_chTo, char a_chBuffer) {
 		// 원반 이동이 불가능 할 경우
 		if(a_nNum <= 0) {
 			return;
 		}
 		
 		printResult_HanoiTower(a_nNum - 1, a_chFrom, a_chBuffer, a_chTo);
-		
-		System.out.printf("%d 번 원반 : %c -> %c 이동\n",
-				a_nNum, a_chFrom, a_chTo);
+		System.out.printf("%d 번 원반 : %c -> %c 이동\n", a_nNum, a_chFrom, a_chTo);
 		
 		printResult_HanoiTower(a_nNum - 1, a_chBuffer, a_chTo, a_chFrom);
 	}
